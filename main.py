@@ -11,14 +11,15 @@ if user_type == "y":
     for i in user_acts:
         if i == (name, password):
             print("your in")
-else:
+
+elif user_type == "n":
     user_name = input("What would your like your username to be? ")
     user_password = input("What would you like your password to be? ")
     user_acts.append((user_name, user_password))
     print(user_acts[len(user_acts) - 1])
 
-file = open("saved_data.py", "w")
-
-file.write("users = " + str(user_acts) + "\n")
-
-file.close()
+    file = open("saved_data.py", "w")
+    file.write("users = " + str(user_acts) + "\n")
+    file.close()
+else:
+    print("Invalid answer")
