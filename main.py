@@ -5,12 +5,12 @@ user_acts = users
 user_type = input("Do you have an account with us? y/n ")
 
 if user_type == "y":
-    name = input("what is your username?")
-    password = input("what is your password")
+    name = input("What is your username? ")
+    password = input("What is your password ")
 
     for i in user_acts:
         if i == (name, password):
-            print("your in")
+            print("Your in!")
 
 elif user_type == "n":
     user_name = input("What would your like your username to be? ")
